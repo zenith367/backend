@@ -1,5 +1,7 @@
 const admin = require("firebase-admin");
-const serviceAccount = require("../serviceAccountKey.json");
+
+// Use the JSON file uploaded to Render
+const serviceAccount = require("/opt/render/project/env/serviceAccountKey.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount)
